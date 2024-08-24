@@ -3,12 +3,16 @@ import { ContainerDetails } from "./styles";
 export function Details() {
   return (
     <ContainerDetails>
-      VAMOS JANTAR ----
-      VAMOS JANTAR ----
-      VAMOS JANTAR ----
-      VAMOS JANTAR ----
-      VAMOS JANTAR ----
-      VAMOS JANTAR ----
+      <h1>
+
+      VAMOS
+      </h1>
+      <p>
+      Tomar café
+
+      </p>
+      
+      
     </ContainerDetails>
   )
 }
