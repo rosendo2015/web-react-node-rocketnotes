@@ -3,7 +3,12 @@ import { ContainerDetails } from "./styles";
 export function Details() {
   return (
     <ContainerDetails>
-      hello word
+      VAMOS JANTAR ----
+      VAMOS JANTAR ----
+      VAMOS JANTAR ----
+      VAMOS JANTAR ----
+      VAMOS JANTAR ----
+      VAMOS JANTAR ----
     </ContainerDetails>
   )
 }
