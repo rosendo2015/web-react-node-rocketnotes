@@ -11,6 +11,10 @@ border-radius: 10px;
 font-weight: 500;
 
 &:disabled{
+    cursor: not-allowed;
     opacity: 0.5;
+}
+&:not:disabled{
+    cursor: pointer;
 }
 `

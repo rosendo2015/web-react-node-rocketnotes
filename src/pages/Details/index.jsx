@@ -1,20 +1,26 @@
 import { Button } from "../../components/Button";
-import { ContainerDetails } from "./styles";
+import { Header } from "../../components/Header";
+import { Section } from "../../components/Section";
+import { Tag } from "../../components/Tag";
+import { ContainerDetails, LinksContainer } from "./styles";
 
 export function Details() {
   return (
     <ContainerDetails>
-      <Button title="Enviar"/>
-     
-      <h1>
-
-      VAMOS
-      </h1>
-      <h2>
-      Tomar café
-
-      </h2>
-      
+      <Header />
+      <Section title="Links Úteis">
+        <LinksContainer>
+        <li><a href="#">www.rocketseat.com.br</a></li>
+        <li><a href="#">www.google.com</a></li>
+        <li><a href="#">www.aromaro.com.br</a></li>
+        </LinksContainer>
+      </Section>
+      <Section title="Marcadores">
+        <Tag title="React"/>
+        <Tag title="Express"/>
+        <Tag title="Node"/>
+      </Section>
+      <Button title="Voltar"/>
       
     </ContainerDetails>
   )
