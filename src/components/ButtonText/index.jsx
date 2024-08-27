@@ -1,7 +1,9 @@
+import { ButtonTextContainer } from "./styles";
+
 export function ButtonText({title, ...rest}){
     return(
-        <buttonTextContainer type="buttom" {...rest}>
+        <ButtonTextContainer type="buttom" {...rest}>
 {title}            
-        </buttonTextContainer>
+        </ButtonTextContainer>
     )
 };
