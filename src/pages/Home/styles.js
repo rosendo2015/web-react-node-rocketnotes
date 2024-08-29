@@ -45,4 +45,16 @@ grid-area: content;
 `
 export const NewNote = styled.button`
 grid-area: newnote;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+
+background: ${({theme})=>theme.COLORS.ORANGE};
+color: ${({theme})=>theme.COLORS.BACKGROUND_900};
+
+font-size: 1.25rem;
+font-weight: 400;
+
+border: none;
 `
