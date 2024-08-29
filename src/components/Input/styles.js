@@ -22,7 +22,8 @@ margin-bottom: 8px;
     width: 100%;
     height: 3.5rem;
     background: transparent;
-   margin-left: 8px;
+    margin-left: 16px;
+    padding-left: 1rem;
 
     &::placeholder{
     color: ${({theme})=>theme.COLORS.GRAY_300};
