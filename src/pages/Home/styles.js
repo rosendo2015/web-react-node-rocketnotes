@@ -38,10 +38,13 @@ text-align: center;
 }
 `
 export const Search  = styled.div`
+padding: 4rem;
 grid-area: search;
 `
 export const Content  = styled.div`
 grid-area: content;
+padding: 4rem;
+overflow-y: auto;
 `
 export const NewNote = styled.button`
 grid-area: newnote;

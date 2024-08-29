@@ -1,7 +1,12 @@
 import { ContainerHome, Brand, Menu, Search, Content, NewNote } from "./styles";
 import { Header } from "../../components/Header"
 import { ButtonText } from "../../components/ButtonText"
-import { FiPlus } from "react-icons/fi";
+import { Section } from "../../components/Section"
+import { FiPlus, FiSearch } from "react-icons/fi";
+import { Input } from "../../components/Input";
+import { Note } from "../../components/Note";
+
+
 
 export function Home() {
     return (
@@ -16,13 +21,22 @@ export function Home() {
                 <li><ButtonText title="Node" /></li>
             </Menu>
             <Search>
-
+                <Input icon={FiSearch} placeholder="Pesquisar por título" />
             </Search>
             <Content>
-
+                <Section title="Minhas notas">
+                    <Note data={{
+                        title:'react modal',
+                        tags:[
+                            {id: '1',name: 'react'},
+                            {id: '2',name: 'rocket'},
+                        ]                       
+                    }}
+                    />                    
+                </Section>
             </Content>
             <NewNote>
-                <FiPlus/>
+                <FiPlus />
                 New Note
             </NewNote>
         </ContainerHome>
