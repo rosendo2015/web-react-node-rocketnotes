@@ -2,7 +2,8 @@ import { Logo } from "../../components/Logo";
 import { Form, SignUpContainer, Background } from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-import { TfiEmail, TfiLock } from "react-icons/tfi";
+
+import { FiLock, FiMail, FiUser } from "react-icons/fi";
 
 export function SignUp() {
     return (
@@ -14,25 +15,21 @@ export function SignUp() {
 
                 <h2>Faça seu login</h2>
                     <Input
-                        icon={TfiEmail}
+                        icon={FiMail}
                         placeholder="E-Mail"
                         type="email"
                     />
                     <Input
-                        icon={TfiLock}
+                        icon={FiLock}
                         placeholder="Senha"
                         type="password"
                     />
                     <Input
-                        icon={TfiEmail}
-                        placeholder="E-Mail"
-                        type="email"
+                        icon={FiUser}
+                        placeholder="Nome"
+                        type="text"
                     />
-                    <Input
-                        icon={TfiLock}
-                        placeholder="Senha"
-                        type="password"
-                    />
+                    
                 
                 <Button title="Cadastrar" />
                 <a href="#">Voltar para o login</a>
