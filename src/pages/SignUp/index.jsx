@@ -14,23 +14,22 @@ export function SignUp() {
                 <p>Aplicação para salvar e gerenciar seus links úteis.</p>
 
                 <h2>Faça seu login</h2>
-                    <Input
-                        icon={FiMail}
-                        placeholder="E-Mail"
-                        type="email"
-                    />
-                    <Input
-                        icon={FiLock}
-                        placeholder="Senha"
-                        type="password"
-                    />
-                    <Input
-                        icon={FiUser}
-                        placeholder="Nome"
-                        type="text"
-                    />
-                    
-                
+                <Input
+                    icon={FiUser}
+                    placeholder="Nome"
+                    type="text"
+                />
+                <Input
+                    icon={FiMail}
+                    placeholder="E-Mail"
+                    type="email"
+                />
+                <Input
+                    icon={FiLock}
+                    placeholder="Senha"
+                    type="password"
+                />
+
                 <Button title="Cadastrar" />
                 <a href="#">Voltar para o login</a>
             </Form>
