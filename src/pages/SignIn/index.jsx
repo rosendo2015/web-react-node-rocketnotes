@@ -3,6 +3,7 @@ import { Form, SignInContainer, Background } from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { TfiEmail, TfiLock } from "react-icons/tfi";
+import { Link } from "react-router-dom";
 
 export function SignIn() {
     return (
@@ -23,7 +24,7 @@ export function SignIn() {
                     type="password"
                 />
                 <Button title="Entrar" />
-                <a href="#">Ciar conta</a>
+                <Link to="/register">Ciar conta</Link>
             </Form>
             <Background />
         </SignInContainer>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {styled} from 'styled-components'
 export const ContainerHome = styled.div`
 width: 100%;
@@ -46,7 +47,7 @@ grid-area: content;
 padding: 4rem;
 overflow-y: auto;
 `
-export const NewNote = styled.button`
+export const NewNote = styled(Link)`
 grid-area: newnote;
 display: flex;
 align-items: center;

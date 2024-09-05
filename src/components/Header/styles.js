@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
@@ -9,7 +10,7 @@ display: flex;
 justify-content: space-between;
 padding: 0 80px;
 `
-export const ProfileContainer = styled.div`
+export const ProfileContainer = styled(Link)`
 display: flex;
 align-items: center;
 
