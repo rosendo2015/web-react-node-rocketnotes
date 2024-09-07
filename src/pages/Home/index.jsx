@@ -19,6 +19,8 @@ export function Home() {
                 <li><ButtonText title="Todos" $isactive /></li>
                 <li><ButtonText title="React" /></li>
                 <li><ButtonText title="Node" /></li>
+                <li><ButtonText title="FrontEnd" /></li>
+                <li><ButtonText title="BackEnd" /></li>
             </Menu>
             <Search>
                 <Input icon={FiSearch} placeholder="Pesquisar por título" />
@@ -30,6 +32,7 @@ export function Home() {
                         tags:[
                             {id: '1',name: 'react'},
                             {id: '2',name: 'rocket'},
+                            {id: '3',name: 'front-end'},
                         ]                       
                     }}
                     />                    
