@@ -4,8 +4,11 @@ import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
 import { TfiEmail, TfiLock } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
 
 export function SignIn() {
+    const data = useAuth()
+    console.log("Meu Contexto => ", data)
     return (
         <SignInContainer>
             <Form>
