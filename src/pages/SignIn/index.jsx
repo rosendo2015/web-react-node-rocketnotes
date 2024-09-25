@@ -5,10 +5,17 @@ import { Button } from "../../components/Button";
 import { TfiEmail, TfiLock } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/auth";
+import { useState } from "react";
 
 export function SignIn() {
-    const data = useAuth()
-    console.log("Meu Contexto => ", data)
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const { signIn } = useAuth()
+
+    function handleSignIn() {
+        signIn({email, password})
+    }
+
     return (
         <SignInContainer>
             <Form>
@@ -20,13 +27,18 @@ export function SignIn() {
                     icon={TfiEmail}
                     placeholder="E-Mail"
                     type="email"
+                    onChange={e => setEmail(e.target.value)}
                 />
                 <Input
                     icon={TfiLock}
                     placeholder="Senha"
                     type="password"
+                    onChange={e => setPassword(e.target.value)}
                 />
-                <Button title="Entrar" />
+                <Button
+                    title="Entrar"
+                    onClick={handleSignIn}
+                />
                 <Link to="/register">Ciar conta</Link>
             </Form>
             <Background />
