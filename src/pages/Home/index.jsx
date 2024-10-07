@@ -5,10 +5,23 @@ import { Section } from "../../components/Section"
 import { FiPlus, FiSearch } from "react-icons/fi";
 import { Input } from "../../components/Input";
 import { Note } from "../../components/Note";
+import { useEffect, useState } from "react";
+import { api } from "../../services/api";
 
 
 
 export function Home() {
+    const [tags, setTags] = useState([])
+
+
+    useEffect(() => {
+        async function fetchTags() {
+            const response = await api.get("/tags")
+            setTags(response.data)
+        }
+
+        fetchTags();
+    }, [])
     return (
         <ContainerHome>
             <Brand>
@@ -16,11 +29,21 @@ export function Home() {
             </Brand>
             <Header />
             <Menu>
-                <li><ButtonText title="Todos" $isactive /></li>
-                <li><ButtonText title="React" /></li>
-                <li><ButtonText title="Node" /></li>
-                <li><ButtonText title="FrontEnd" /></li>
-                <li><ButtonText title="BackEnd" /></li>
+                <li>
+                    <ButtonText
+                        title="Todos"
+                        $isactive
+                    />
+                </li>
+                {tags && tags.map(tag => (
+                    <li
+                        key={String(tag.id)}
+                    ><ButtonText
+                            title={tag.name}
+                        />
+                    </li>
+                ))}
+
             </Menu>
             <Search>
                 <Input icon={FiSearch} placeholder="Pesquisar por título" />
@@ -28,14 +51,14 @@ export function Home() {
             <Content>
                 <Section title="Minhas notas">
                     <Note data={{
-                        title:'react modal',
-                        tags:[
-                            {id: '1',name: 'react'},
-                            {id: '2',name: 'rocket'},
-                            {id: '3',name: 'front-end'},
-                        ]                       
+                        title: 'react modal',
+                        tags: [
+                            { id: '1', name: 'react' },
+                            { id: '2', name: 'rocket' },
+                            { id: '3', name: 'front-end' },
+                        ]
                     }}
-                    />                    
+                    />
                 </Section>
             </Content>
             <NewNote to="/newnote">
