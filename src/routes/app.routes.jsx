@@ -1,5 +1,3 @@
-import { SignIn } from '../pages/SignIn';
-import { SignUp } from '../pages/SignUp';
 import { NewNote } from '../pages/NewNote';
 import { Home } from '../pages/Home';
 import { Profile } from '../pages/Profile';
