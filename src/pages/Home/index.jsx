@@ -7,8 +7,9 @@ import { Input } from "../../components/Input";
 import { Note } from "../../components/Note";
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
-
+const navigate = useNavigate()
 
 export function Home() {
     const [tags, setTags] = useState([])
@@ -17,6 +18,9 @@ export function Home() {
     const [notes, setNotes] = useState([])
 
     function handleTagSelected(tagName) {
+        if (tagName === "all") {
+            return setTagsSelected([])
+        }
         const alreadySelected = tagsSelected.includes(tagName)
 
         if (alreadySelected) {
@@ -26,6 +30,10 @@ export function Home() {
             setTagsSelected(prevState => [...prevState, tagName])
         }
 
+    }
+
+    function handleDetails(id) {
+        navigate(`/details/${id}`)
     }
 
 
@@ -77,7 +85,7 @@ export function Home() {
                 <Input
                     icon={FiSearch}
                     placeholder="Pesquisar por título"
-                    onChange={() => setSearch(e.target.value)}
+                    onChange={(e) => setSearch(e.target.value)}
                 />
             </Search>
             <Content>
@@ -87,6 +95,7 @@ export function Home() {
                             <Note
                                 key={String(note.id)}
                                 data={note}
+                                onClick={() => { handleDetails(note.id) }}
                             />
                         ))
                     }
