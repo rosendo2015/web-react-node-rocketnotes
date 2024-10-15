@@ -9,9 +9,9 @@ import { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate()
 
 export function Home() {
+    const navigate = useNavigate()
     const [tags, setTags] = useState([])
     const [tagsSelected, setTagsSelected] = useState([])
     const [search, setSearch] = useState("")
@@ -31,11 +31,12 @@ export function Home() {
         }
 
     }
-
+    
     function handleDetails(id) {
+       
         navigate(`/details/${id}`)
     }
-
+    
 
     useEffect(() => {
         async function fetchTags() {

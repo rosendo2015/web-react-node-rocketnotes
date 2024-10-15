@@ -44,7 +44,7 @@ export function Details() {
           <ContentContainer>
             <ButtonText
               title="Excluir nota"
-              onClick={() => handleRemoveNote(id)}
+              onClick={handleRemoveNote}
             />
             <h1>
               {data.title}
