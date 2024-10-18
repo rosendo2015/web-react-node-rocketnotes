@@ -14,7 +14,7 @@ export function Details() {
   const params = useParams()
   const navigate = useNavigate()
   function handleBack() {
-    navigate("/")
+    navigate(-1)
   }
 
 
@@ -22,16 +22,16 @@ export function Details() {
     const confirm = window.confirm("Apagar a nota?")
     if (confirm) {
       await api.delete(`/notes/${params.id}`)
-      navigate("/")
+      navigate(-1)
     }
   }
 
   useEffect(() => {
-    async function fetchNotes() {
+    async function fetchNote() {
       const response = await api.get(`/notes/${params.id}`)
       setData(response.data)
     }
-    fetchNotes()
+    fetchNote()
 
   }, [])
 
@@ -69,7 +69,7 @@ export function Details() {
               </Section>
             }
             {
-              data.tags &&
+              data.tags.length > 0 &&
               <Section title="Marcadores">
                 {
                   data.tags.map(
