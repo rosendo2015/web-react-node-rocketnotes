@@ -2,7 +2,7 @@ import { NewNote } from '../pages/NewNote';
 import { Home } from '../pages/Home';
 import { Profile } from '../pages/Profile';
 import { Details } from '../pages/Details';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 
 export function AppRoutes(){
